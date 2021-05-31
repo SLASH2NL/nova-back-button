@@ -1,9 +1,11 @@
 {
     "name": "slash2nl/nova-back-button",
-    "description": "A Laravel Nova card.",
+    "description": "A Laravel Nova card to display a back button.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "back",
+        "button"
     ],
     "license": "MIT",
     "require": {
