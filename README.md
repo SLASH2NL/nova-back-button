@@ -26,12 +26,16 @@ use SLASH2NL\NovaBackButton\NovaBackButton;
 public function cards()
 {
     return [ 
-        new NovaBackButton(),
+        (new NovaBackButton())
+            ->onlyOnDetail(),
         
         (new NovaBackButton())
+            ->onlyOnDetail()
             ->width('1/3')
             ->markdown('# Hello World!'),
+
         (new NovaBackButton())
+            ->onlyOnDetail()
             ->width('1/3')
             ->view('partials.back-button')
             ->url('/resources/entity/1'),
