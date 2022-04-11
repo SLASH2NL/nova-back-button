@@ -1,21 +1,22 @@
 <template>
-    <compoonent :is="card.withoutCardStyles ? 'div' : 'card'" class="backButton" :class="cardClassList">
-        <router-link
+    <component :is="card.withoutCardStyles ? 'div' : 'Card'" class="backButton" :class="cardClassList">
+        <Link
             v-if="card.url"
-            :to="card.url"
-            v-html="card.content"
+            :href="card.url"
             class="backButton__content"
-            v-class="{ 'px-3': ! card.withoutCardStyles, 'py-3': ! card.withoutCardStyles }"
-        ></router-link>
+            :class="{ 'px-3': ! card.withoutCardStyles, 'py-3': ! card.withoutCardStyles }"
+            v-html="card.content"
+        >
+        </Link>
 
         <a
             v-else
             href="javascript:history.go(-1)"
-            v-html="card.content"
             class="backButton__content"
-            v-class="{ 'px-3': ! card.withoutCardStyles, 'py-3': ! card.withoutCardStyles }"
+            :class="{ 'px-3': ! card.withoutCardStyles, 'py-3': ! card.withoutCardStyles }"
+            v-html="card.content"
         ></a>
-    </compoonent>
+    </component>
 </template>
 
 <script>
@@ -27,7 +28,7 @@
             cardClassList() {
                 let classes = '';
                 if (this.card.center) {
-                    classes += ' flex flex-col justify-center text-center';
+                    classes += ' flex flex-col items-center justify-center';
                 }
 
                 return classes;
