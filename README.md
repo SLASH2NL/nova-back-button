@@ -14,8 +14,7 @@ You can install the package in to a Laravel app that uses [Nova](https://nova.la
 
 - Install version ^1.0 for Laravel Nova ^1.0|^2.0|^3.0
 - Install version ^2.0 for Laravel Nova ^4.0
-<br>
-<br>
+
 ```bash
 composer require slash2nl/nova-back-button
 ```
