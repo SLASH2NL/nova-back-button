@@ -41,7 +41,7 @@ public function cards()
             ->onlyOnDetail()
             ->width('1/3')
             ->view('partials.back-button')
-            ->url('/resources/entity/1'),
+            ->url(sprintf('%s/resources/%s/%d', config('nova.path'), User::uriKey(), \App\Models\User::first()->id)),
      ];
 }
 ```

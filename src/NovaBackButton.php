@@ -112,8 +112,9 @@ class NovaBackButton extends Card
     }
 
     /**
-     * URL for the card. Can be an array with a Vue router value or just a string.
+     * URL for the card. This is passed to the Inertia href.
      *
+     * @see https://inertiajs.com/links
      * @param mixed $url
      * @return NovaBackButton
      */
