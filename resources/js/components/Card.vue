@@ -46,6 +46,7 @@
 <style>
     .backButton {
         height: auto;
+        min-height: inherit;
     }
     .backButton__content > p:not(:last-child) {
         margin-bottom: 1em;
